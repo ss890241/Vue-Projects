@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+    <link rel="stylesheet" href="./style/ticket.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="ticket">
+            <div class="conpany">{{company}}</div>
+            <div class="info">{{ticket1.date}}</div>
+            <div class="info">{{ticket1.direction == "south" ? '南下' : '北上'}} {{ticket1.level}}</div>
+            <div class="station">{{ticket1.from}}站</div>
+            <div class="arrow">&darr;</div>
+            <div class="station">{{ticket1.to}}站</div>
+            <div class="other" v-html="ticket1.other"></div>
+            <div class="info">售價{{ticket1.price*ticket1.discount}}元</div>
+        </div>
+        <div class="ticket">
+            <div class="conpany">{{company}}</div>
+            <div class="info">{{ticket2.date}}</div>
+            <div class="info">{{ticket2.direction == "south" ? '南下' : '北上'}} {{ticket2.level}}</div>
+            <div class="station">{{ticket2.from}}站</div>
+            <div class="arrow">&darr;</div>
+            <div class="station">{{ticket2.to}}站</div>
+            <div class="other" v-html="ticket2.other"></div>
+            <div class="info">售價{{ticket2.price*ticket2.discount}}元</div>
+        </div>
+    </div>
+
+</body>
+
+<script src="./ticket.js"></script>
+
+</html>

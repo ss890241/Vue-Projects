@@ -1,0 +1,161 @@
+body {
+  background-color: #282f38;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+body .editArea {
+  margin-right: 30px;
+}
+
+body .coffeeType {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 400px;
+  padding: 10px 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .coffeeType.favorite::before {
+  content: 'BEST';
+  border: 4px solid;
+  color: #ff5e5e;
+  padding: 5px 3px;
+  font-size: 20px;
+  position: absolute;
+  -webkit-transform: translateX(-50px) rotate(-20deg);
+          transform: translateX(-50px) rotate(-20deg);
+  -webkit-box-shadow: 2px 2px 3px black;
+          box-shadow: 2px 2px 3px black;
+}
+
+body .coffeeType:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+body .coffeeType.showMode label, body .coffeeType.showMode select, body .coffeeType.showMode input {
+  display: none;
+}
+
+body .coffeeType .num {
+  font-size: 60px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 30px;
+}
+
+body .coffeeType .cupContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 50px;
+}
+
+body .coffeeType .cupContainer .cup {
+  border: 4px solid white;
+  width: 70px;
+  height: 50px;
+  border-top: none;
+  border-radius: 0 0 50px 50px;
+  margin: 10px;
+  padding-top: 5px;
+  position: relative;
+}
+
+body .coffeeType .cupContainer .cup::before {
+  content: '';
+  display: block;
+  border: 4px solid white;
+  width: 15px;
+  height: 20px;
+  position: absolute;
+  left: 100%;
+  top: 15%;
+  border-left: none;
+  border-radius: 0 50px 50px 0;
+}
+
+body .coffeeType .cupContainer .cup.Short {
+  width: 50px;
+  height: 40px;
+}
+
+body .coffeeType .cupContainer .cup.Grande {
+  width: 80px;
+  height: 50px;
+}
+
+body .coffeeType .cupContainer .cup.Venti {
+  width: 70px;
+  height: 80px;
+  border-radius: 0;
+}
+
+body .coffeeType .cupContainer .cup.Venti .ingradients {
+  border-radius: 0;
+}
+
+body .coffeeType .cupContainer .cup .ingradients {
+  height: 100%;
+  width: 100%;
+  border-radius: 0 0 50px 50px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+body .coffeeType .cupContainer .cup .ingradients .coffee {
+  background-color: #66491a;
+  height: 10px;
+}
+
+body .coffeeType .cupContainer .cup .ingradients .foam {
+  background-color: white;
+  height: 5px;
+}
+
+body .coffeeType .cupContainer .cup .ingradients .water {
+  background-color: #589bce;
+  height: 5px;
+}
+
+body .coffeeType .cupContainer .cup .ingradients .syrup {
+  background-color: #da773e;
+  height: 5px;
+}
+
+body .coffeeType .cupContainer .cup .ingradients .milk {
+  background-color: #ffecd9;
+  height: 5px;
+}
+
+body .coffeeType .control {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+body .coffeeType .control select {
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=coffee.css.map */

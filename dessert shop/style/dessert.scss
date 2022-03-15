@@ -1,0 +1,49 @@
+body{
+    background-color: #dbcdb8;
+    .control{
+        line-height: 30px;
+        .num{
+            width: 50px;
+            margin-right: 20px;
+        }
+        .maxPrice{
+            margin-left: -20px;
+        }
+    }
+    .menu{    
+        border: 1px solid black;
+        padding: 20px;
+        .card{
+            box-shadow: 0px 0px 20px rgba(black, 0.3);
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+            background-color: rgb(255, 246, 228);
+            .pic{
+                width: 220px;
+            }
+            .info{
+              padding: 10px;
+              h3{
+                  margin: 0 0 5px 0;
+                  .soldOut{
+                      float: right;
+                      color: #f75b5b;
+                  }
+              }  
+              .price{
+                  font-size: 24px;
+                  display: inline-block;
+                  span{
+                      font-size: 16px;
+                  }
+              }
+              .other{
+                  display: inline-block;
+                  font-size: 16px;
+                  opacity: 0.4;
+              }
+            }
+        }
+    }
+}

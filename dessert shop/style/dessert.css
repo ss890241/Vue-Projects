@@ -1,0 +1,63 @@
+body {
+  background-color: #dbcdb8;
+}
+
+body .control {
+  line-height: 30px;
+}
+
+body .control .num {
+  width: 50px;
+  margin-right: 20px;
+}
+
+body .control .maxPrice {
+  margin-left: -20px;
+}
+
+body .menu {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+body .menu .card {
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+  background-color: #fff6e4;
+}
+
+body .menu .card .pic {
+  width: 220px;
+}
+
+body .menu .card .info {
+  padding: 10px;
+}
+
+body .menu .card .info h3 {
+  margin: 0 0 5px 0;
+}
+
+body .menu .card .info h3 .soldOut {
+  float: right;
+  color: #f75b5b;
+}
+
+body .menu .card .info .price {
+  font-size: 24px;
+  display: inline-block;
+}
+
+body .menu .card .info .price span {
+  font-size: 16px;
+}
+
+body .menu .card .info .other {
+  display: inline-block;
+  font-size: 16px;
+  opacity: 0.4;
+}
+/*# sourceMappingURL=dessert.css.map */

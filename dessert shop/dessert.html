@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="./style/dessert.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="control">
+            <label>最低金額</label>
+            <input class="num" v-model="minPrice">
+            <label class="maxPrice">~ 最高金額</label>
+            <input class="num" v-model="maxPrice">
+            <label>冷藏運費</label>
+            <input class="num" v-model.number="freight">
+            <label>關鍵字搜尋</label>
+            <input class="num" v-model="keyword">
+            <br>
+            <span v-for="card in cards">
+                <label>
+                    <input type="checkbox" v-model="card.soldOut">
+                    {{card.title}}
+                </label>
+                <input class="num" v-model.number="card.price">
+            </span>
+        </div>
+        <div class="menu">
+            <div class="cards">
+                <h4 v-if="keyword">符合搜尋『{{keyword}}』的品項：</h4>
+                <div class="card" v-for="card in cards" v-if="(freight + card.price > minPrice) &&
+                          (freight + card.price < maxPrice) &&
+                          (card.title.indexOf(keyword)!==-1) ">
+                    <img class="pic" :src='card.pic'>
+                    <div class="info">
+                        <h3>{{card.title}}
+                            <div class="soldOut" v-show="card.soldOut">已售完</div>
+                        </h3>
+                        <div class="price">${{freight + card.price}} <span>(含運費)</span></div>
+                        <div class="other">+{{serviceFee}}%稅金</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="./dessert.js"></script>
+
+</html>

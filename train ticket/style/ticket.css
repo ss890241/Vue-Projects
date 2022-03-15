@@ -1,0 +1,60 @@
+body {
+  background-color: #333;
+}
+
+body #app {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #app .ticket {
+  margin-right: 30px;
+  background-color: #fff;
+  padding: 20px 10px;
+  text-align: center;
+  background-image: radial-gradient(#d1e8c98e 0%, #d1e8c98e 20%, transparent 20%, transparent 40%, #d1e8c98e 40%, #d1e8c98e 55%, transparent 70%, transparent 100%);
+  background-size: 25px 25px;
+}
+
+body #app .ticket .conpany {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+body #app .ticket .info {
+  margin-top: 5px;
+}
+
+body #app .ticket .station {
+  font-size: 18px;
+  margin: 5px;
+  font-weight: 600;
+}
+
+body #app .ticket .arrow {
+  font-size: 18px;
+}
+
+body #app .ticket .other {
+  font-size: 13px;
+  font-weight: 900;
+}
+
+body #app .ticket:hover {
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
+  -webkit-transform: translate(0px, -10px);
+          transform: translate(0px, -10px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+/*# sourceMappingURL=ticket.css.map */
